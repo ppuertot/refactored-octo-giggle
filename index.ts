@@ -1,4 +1,4 @@
-import express, { Express, Request, Response, Router } from "express";
+import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 dotenv.config();
 import { router } from "./src/router";
