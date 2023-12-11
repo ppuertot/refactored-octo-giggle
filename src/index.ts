@@ -2,7 +2,7 @@ import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 dotenv.config();
 import logger from "morgan";
-import { router as router1 } from "./src/router";
+import router from "./router";
 
 const app: Express = express();
 const port = process.env.PORT;
@@ -15,7 +15,7 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/router", router1);
+app.use("/router", router);
 
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${port}`);
